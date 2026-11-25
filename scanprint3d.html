@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScanPrint3D - Support &amp; Scanning Guide | S.K. Studios, LLC</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f9fb;
+      --card: #ffffff;
+      --ink: #102636;
+      --muted: #4b6578;
+      --accent: #0b7a8f;
+      --border: #d2e4eb;
+      --tint: #eaf6fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 28px 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 24px;
+      box-shadow: 0 6px 24px rgba(16, 38, 54, 0.06);
+    }
+    h1 { margin: 0 0 6px; font-size: 1.75rem; }
+    h2 { margin: 28px 0 10px; font-size: 1.18rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+    h3 { margin: 18px 0 6px; font-size: 1rem; color: var(--ink); }
+    p, li { color: var(--ink); }
+    .sub { margin: 0 0 18px; color: var(--muted); }
+    .box {
+      background: var(--tint);
+      border: 1px solid #bfe0ea;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 6px;
+    }
+    .toc a {
+      background: var(--tint);
+      border: 1px solid #bfe0ea;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+    }
+    .table-wrap { overflow-x: auto; margin: 12px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--tint);
+      color: var(--ink);
+      font-weight: 700;
+    }
+    code {
+      background: #eef5f8;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-size: 0.88em;
+    }
+    a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>ScanPrint3D &mdash; Support &amp; Scanning Guide</h1>
+    <p class="sub">Official help, capture tips &amp; tricks, and purchase support for <strong>ScanPrint3D</strong> by <strong>S.K. Studios, LLC</strong>.</p>
+
+    <div class="box">
+      <strong>Need help, hit a crash, or have scan feedback?</strong><br>
+      Email us anytime at <a href="mailto:support@stinkykitties.com">support@stinkykitties.com</a>. Open the <strong>About</strong> screen in ScanPrint3D and tap <strong>COPY BUILD INFO</strong> so we have your exact version, device hardware status, and build number.
+    </div>
+
+    <div class="toc">
+      <a href="#modes">1. Scan Modes</a>
+      <a href="#lighting">2. Lighting &amp; Backdrop</a>
+      <a href="#materials">3. Difficult Materials</a>
+      <a href="#technique">4. Capture Technique</a>
+      <a href="#cleanup">5. Cleanup &amp; Export</a>
+      <a href="#troubleshooting">6. Troubleshooting</a>
+      <a href="#purchases">Purchases &amp; Privacy</a>
+    </div>
+
+    <h2 id="modes">1. Choosing the Right Scan Mode</h2>
+    <p>Matching the capture mode to your object&apos;s real-world size makes the biggest difference in geometric sharpness and scale accuracy.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Mode</th>
+            <th>Best Object Size</th>
+            <th>How It Works</th>
+            <th>Key Tips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>MINI</strong></td>
+            <td><strong>3 &ndash; 8 cm</strong> (1 &ndash; 3 in)<br><em>Miniatures, lighters, figurines, game pieces, small hardware</em></td>
+            <td>2&nbsp;cm Ultra-Wide Macro lens + Vision subject isolation (no LiDAR depth)</td>
+            <td>Hold <strong>8&ndash;15&nbsp;cm</strong> away so the item fills <strong>60&ndash;80%</strong> of the reticle. Use <code>SPIN</code> or <code>MANUAL</code> tap. After building, tap <code>SET MM</code> with one real ruler/caliper dimension &mdash; macro photogrammetry is unscaled.</td>
+          </tr>
+          <tr>
+            <td><strong>OBJECT</strong></td>
+            <td><strong>8 &ndash; 45 cm</strong> (3 &ndash; 18 in)<br><em>Mugs, statues, tools, cinder blocks, sneakers, everyday objects</em></td>
+            <td>ARKit + LiDAR + HD Photogrammetry inside a 3D crop box</td>
+            <td>Supports <code>ORBIT</code> (walk around), <code>SPIN</code> (lazy Susan), and <code>+ FLIP</code> to stitch undersides. Use <strong>MINI</strong> for slender items under ~8&nbsp;cm.</td>
+          </tr>
+          <tr>
+            <td><strong>10FT &bull; HD PHOTO</strong></td>
+            <td><strong>0.6 &ndash; 3.05 m</strong> (2 &ndash; 10 ft)<br><em>Chairs, sculptures, trash cans, furniture, large props</em></td>
+            <td>3-band perimeter capture (<code>LOW</code>, <code>MID</code>, <code>UP</code>), up to 72 shots</td>
+            <td>Best detail &amp; photo texture for large objects. Spread <strong>35&ndash;55</strong> shots cleanly across all three height bands.</td>
+          </tr>
+          <tr>
+            <td><strong>10FT &bull; FAST LIDAR</strong></td>
+            <td><strong>0.6 &ndash; 3.05 m</strong> (2 &ndash; 10 ft)<br><em>Quick room props, plain furniture, fast size mockups</em></td>
+            <td>Real-time LiDAR mesh reconstruction + RGB keyframe projection</td>
+            <td>Builds in seconds with no photogrammetry wait. Best for quick dimensional mockups or low-texture surfaces.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="lighting">2. Lighting &amp; Backdrop Setup</h2>
+    <ul>
+      <li><strong>Use bright, even, diffused light:</strong> Indirect daylight, soft room lighting, or two balanced lamps capture crisp surface detail without harsh shadows.</li>
+      <li><strong>Avoid single-point spotlights or shifting shadows:</strong> Your own shadow crossing the object as you walk around interferes with feature matching.</li>
+      <li><strong>Contrast your object against the table:</strong> Avoid scanning glossy or similarly colored items on bare polished wood. Place small items on a <strong>matte, contrasting cloth, felt pad, or plain slate coaster</strong>.</li>
+      <li><strong>Elevate tiny flat-bottom objects slightly:</strong> Setting a tiny piece on a narrow matte riser (such as a dull bottle cap smaller than the base) keeps the table out of the silhouette so <code>BASE CUT</code> leaves a crisp footprint.</li>
+      <li><strong><code>MINI</code> Torch tip:</strong> Turn the Torch <strong>ON</strong> only for matte recessed textures in dim areas; keep it <strong>OFF</strong> on shiny plastics or metal so specular highlights do not slide across shots.</li>
+    </ul>
+
+    <h2 id="materials">3. Difficult Materials &amp; Practical Workarounds</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Material / Shape</th>
+            <th>Why Passive Scanning Struggles</th>
+            <th>Practical Workaround</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Glossy or solid-color plastic</strong><br><em>(lighters, shiny toys, lacquered shells)</em></td>
+            <td>Reflections shift every step while uniform plastic lacks trackable micro-texture.</td>
+            <td>Use soft diffused lighting + <strong>MINI</strong> mode if &lt;8&nbsp;cm, or lightly dust with washable <strong>dry shampoo / cornstarch / talcum powder</strong> (or matte 3D scanning spray). Even a couple of tiny matte tape dots on large smooth faces help camera lock.</td>
+          </tr>
+          <tr>
+            <td><strong>Bare chrome, polished metal, mirrors</strong></td>
+            <td>Mirrors reflect the surrounding room instead of showing their own surface geometry.</td>
+            <td>Apply washable matte dulling spray/powder or matte painter&apos;s tape before capture and wipe clean afterward.</td>
+          </tr>
+          <tr>
+            <td><strong>Open wire cages, grilles, fan blades</strong></td>
+            <td>Parallax seen through thin wire gaps causes mobile reconstruction to bridge across open grille faces.</td>
+            <td>Photogrammetry works best on solid hulls; expect narrow grille gaps to bridge into a solid shell unless solid-backed or modeled cleanly afterward.</td>
+          </tr>
+          <tr>
+            <td><strong>Clear glass &amp; transparent acrylic</strong></td>
+            <td>Light refracts through the object into whatever sits behind it.</td>
+            <td>Coat temporarily with washable matte spray/powder, or wrap in matte tape for reference measurements.</td>
+          </tr>
+          <tr>
+            <td><strong>Best natural subjects</strong></td>
+            <td>Matte diffuse micro-texture locks thousands of sharp 3D points cleanly.</td>
+            <td><strong>Stone, concrete &amp; cinder blocks, wood, ceramics, painted figures, clay, matte 3D prints, sneakers, fabric.</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="technique">4. Capture Technique (<code>ORBIT</code>, <code>SPIN</code>, <code>+ FLIP</code>)</h2>
+    <ul>
+      <li><strong>Leave generous box headroom:</strong> After tapping your object, size the 3D box so the entire object &mdash; especially tops and handles &mdash; fits comfortably inside, and tap <strong>FLOOR</strong> to snap the green base plane to the table.</li>
+      <li><strong>Step smoothly and pause briefly:</strong> Auto-shutter rejects motion blur automatically. Small pauses at each angle yield sharper geometry than continuous rapid movement.</li>
+      <li><strong>Aim for the 30&ndash;48 shot sweet spot:</strong> Roughly <strong>30&ndash;48 crisp, evenly spaced photos</strong> across multiple heights beat <code>70+</code> cluttered shots from one level (faster builds, cleaner detail). Tap <strong>DONE</strong> once coverage arcs are mostly filled.</li>
+      <li><strong>Lazy Susan (<code>SPIN</code>):</strong> Keep the phone steady, turn the object ~<code>15&deg;</code> at a time, and wait briefly for <code>SNAP &#10003;</code>. Finish Ring 1 (eye level), then raise the phone ~<code>35&ndash;40&deg;</code> for Ring 2.</li>
+      <li><strong>Stitching the bottom (<code>+ FLIP</code>):</strong> After Pass 1 has <code>10+</code> shots, tap <strong>+ FLIP</strong>, rest the object on its side or upside down, place the Pass 2 crop box, and capture a second pass to seal the underside.</li>
+    </ul>
+
+    <h2 id="cleanup">5. Inspection, Cleanup &amp; Slicer Export</h2>
+    <ol>
+      <li><strong>Always check <code>SOLID</code> mode before exporting:</strong> Photo textures in <code>COLOR</code> can hide rough ripples or blobs. Tap <strong>SOLID</strong> to inspect the true uncolored watertight geometry, and check <strong>WIRE</strong> / <strong>X-RAY</strong> for mesh density.</li>
+      <li><strong>Level first with <code>ORIENT</code>:</strong> Use <strong>ORIENT</strong> &rarr; <strong>AUTO STAND</strong> or Pitch/Roll controls so the base sits level on the build plate before trimming.</li>
+      <li><strong>Trim a clean printing bottom with <code>BASE CUT</code>:</strong> Slide <code>BASE CUT</code> just high enough to slice away any residual tabletop skirt into a flat, sealed bottom. Toggle <strong>Smooth Rebuild</strong> only if you want Voxel Solidifier smoothing over a noisy surface.</li>
+      <li><strong>Set real millimeters with <code>SCALE</code>:</strong> Tap the dimension pill or <strong>SHARE &rarr; Scale / Resize Model&hellip;</strong> to enter one caliper/ruler width, depth, or height in mm (essential for <code>MINI</code> scans), or pick quick <code>50/100/150/200mm</code> / <code>0.5&times;</code> / <code>2&times;</code> multipliers.</li>
+      <li><strong>Choose your export format:</strong>
+        <ul>
+          <li><code>.STL</code> (<em>Export Pro</em>): Universal watertight binary STL for Bambu Studio, PrusaSlicer, OrcaSlicer, Cura, Lychee, and Chitubox.</li>
+          <li><code>.3MF</code> (<em>Export Pro</em> / <em>Color Pro</em>): Compact millimeter-scaled print package with optional vertex colors.</li>
+          <li><code>.USDZ</code> (<em>Color Pro</em>): Full UV photo-textured 3D model for AR Quick Look and desktop 3D software.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2 id="troubleshooting">6. Quick Troubleshooting</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>What Happened</th>
+            <th>Likely Cause</th>
+            <th>How to Fix It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tiny object came out thick, blobby, or wood-colored</strong></td>
+            <td>Scanned &lt;8&nbsp;cm slender item in <code>OBJECT</code> mode on a wood/glossy desk</td>
+            <td>Switch to <strong>MINI</strong>, set on a <strong>matte contrasting mat</strong>, fill most of the reticle, and calibrate via <code>SET MM</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Top of model looked flat or sliced</strong></td>
+            <td>Box height was tight at the top edge</td>
+            <td>Add a few cm of extra top clearance when sizing the box.</td>
+          </tr>
+          <tr>
+            <td><strong>Shiny/chrome parts lost shape</strong></td>
+            <td>Moving reflections with no surface texture</td>
+            <td>Use diffused lighting and washable matte powder/spray or small matte tape markers.</td>
+          </tr>
+          <tr>
+            <td><strong>Processing took too long</strong></td>
+            <td>Excess redundant shots from one elevation</td>
+            <td>Keep captures around <strong>30&ndash;48</strong> crisp shots across 2&ndash;3 height rings and tap <strong>DONE</strong> once coverage rings fill.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="purchases">Requirements, Purchases &amp; Privacy</h2>
+    <ul>
+      <li><strong>Supported Devices:</strong> Pro iPhone and iPad models with LiDAR and Apple Object Capture support for <code>OBJECT</code> &amp; <code>10FT</code> modes; macro camera capture supported in <code>MINI</code> mode.</li>
+      <li><strong>Restoring Purchases:</strong> ScanPrint3D offers optional one-time, non-subscription unlocks &mdash; <strong>STL + 3MF Export Pro</strong> ($4.99) and <strong>Color Pro</strong> ($9.99, USDZ + colored .3MF). Open any scan&apos;s export menu (or tap <strong>Unlock Export</strong>) and tap <strong>Restore Purchases</strong> while signed into the same Apple Account.</li>
+      <li><strong>100% On-Device Privacy:</strong> All camera photos, LiDAR depth frames, 3D reconstructions, and exported meshes stay strictly on your device. Read the <a href="./scanprint3d-privacy.html">ScanPrint3D Privacy Policy</a> &middot; <a href="./">All S.K. Studios Apps</a>.</li>
+    </ul>
+
+    <footer>
+      &copy; 2026 S.K. Studios, LLC. Contact: <a href="mailto:support@stinkykitties.com">support@stinkykitties.com</a>
+    </footer>
+  </main>
+</body>
+</html>
